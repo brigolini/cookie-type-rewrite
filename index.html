@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is a cookie rewrite test</title>
+    <script type="text/plain" class="optanon-category-C0002">
+    document.cookie = "testCookie=exampleValue; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    </script>
+</head>
+<body>
+ <div>Do you agree with cookies?</div>
+ <button onclick="acceptCookies()">Accept Cookies</button>
+ <script>
+     function acceptCookies() {
+         var script = document.querySelector('script.optanon-category-C0002');
+         if (script) {
+             script.type = 'text/javascript';
+             eval(script.innerHTML);
+         }
+     }
+ </script>
+</body>
+</html>
