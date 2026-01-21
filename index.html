@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>This is a cookie rewrite test</title>
-    <script type="text/plain" class="optanon-category-C0002">
-    document.cookie = "testCookie=exampleValue; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    <script type="text/plain" class="optanon-category-C0001">
+        document.cookie = "cat1=cat1; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
     </script>
+    <script type="text/plain" class="optanon-category-C0002">
+    document.cookie = "cat2=cat2; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    </script>
+    <script type="text/plain" class="optanon-category-C0003">
+    document.cookie = "cat3=cat3; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    </script>
+    <script type="text/plain" class="optanon-category-C0004">
+    document.cookie = "cat4=cat4; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    </script>
+    <script type="text/plain" class="optanon-category-C0005">
+    document.cookie = "cat5=cat5; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    </script>
+    <!-- OneTrust Cookies Consent Notice start for github.com/brigolini/cookie-type-rewrite -->
+
+    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="019bde21-b8c0-797d-95fe-1a73d04d1106-test" ></script>
+    <script type="text/javascript">
+        function OptanonWrapper() { }
+    </script>
+    <!-- OneTrust Cookies Consent Notice end for github.com/brigolini/cookie-type-rewrite -->
 </head>
 <body>
- <div>Do you agree with cookies?</div>
- <button onclick="acceptCookies()">Accept Cookies</button>
+ <!--<div>Do you agree with cookies?</div>
+ <button onclick="acceptCookies('script.optanon-category-C0001, script.optanon-category-C0002')">Accept Cookies</button>
+ <button onclick="acceptCookies('script.optanon-category-C0001')">Only essetial Cookies</button>
  <script>
-     function acceptCookies() {
-         var script = document.querySelector('script.optanon-category-C0002');
-         if (script) {
+     function acceptCookies(cookieList) {
+         var scripts = document.querySelectorAll(cookieList);
+         scripts.forEach(function (script) {
              script.type = 'text/javascript';
              eval(script.innerHTML);
-         }
+         });
      }
- </script>
+ </script>-->
 </body>
 </html>
